@@ -8,10 +8,10 @@ Target Users:
 
 The main users of this project are myself and my family members. Therefore, the weather insights will be provided for the following locations:
 
-Windsor, Ontario, Canada: My current location.
-Ottawa, Ontario, Canada: My sister's location.
-Ahmedabad, Gujarat, India: My hometown and my parents' current location.
-Perth, Australia: My wife's current location.
+1) Windsor, Ontario, Canada: My current location.
+2) Ottawa, Ontario, Canada: My sister's location.
+3) Ahmedabad, Gujarat, India: My hometown and my parents' current location.
+4) Perth, Australia: My wife's current location.
 
 Data Source:
 
@@ -41,6 +41,10 @@ Output:
 A successful run of this project will result in an email being sent to all users. This email will include information about the DAG run and a link that allows users to access the real-time weather dashboard for their chosen location.
 
 ![image](https://github.com/Jay-05022000/OpenWeather-Airflow-Project/assets/110780565/587dce85-ce9a-450d-ab79-2190efa0bf53)
+
+Interactive Weather Dashboard Accessible to user.
+
+![image](https://github.com/Jay-05022000/OpenWeather-Airflow-Project/assets/110780565/0e55685a-6990-4533-8481-cdcbea062520)
 
 Challenges:
 
