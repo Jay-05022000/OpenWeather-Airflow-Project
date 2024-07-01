@@ -31,6 +31,11 @@ Tools Used:
 3) AWS Glue: To crawl CSV data available in the S3 bucket and create Athena tables for data analysis.
 4) Power BI Service: To create an interactive visualization report that can be refreshed automatically and shared with users.
 
+Folder Structure:
+
+![image](https://github.com/Jay-05022000/OpenWeather-Airflow-Project/assets/110780565/c31adb6e-549d-4693-98ba-073eac880ada)
+
+
 Project Learnings:
 
 1)  Setting environment variables in the local system to store credentials for system-wide or different IDE usage.
