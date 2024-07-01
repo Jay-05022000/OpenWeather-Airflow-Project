@@ -1,1 +1,59 @@
 # OpenWeather-Airflow-Project
+
+Objective:
+
+The primary goal of this project is to develop a dashboard or webpage that allows users to access current and future weather forecast information for a desired location conveniently. Users will be able to obtain real-time weather updates, 12-hour forecasts, and 8-day weather forecasts for selected locations with a single click.
+
+Target Users:
+
+The main users of this project are myself and my family members. Therefore, the weather insights will be provided for the following locations:
+
+Windsor, Ontario, Canada: My current location.
+Ottawa, Ontario, Canada: My sister's location.
+Ahmedabad, Gujarat, India: My hometown and my parents' current location.
+Perth, Australia: My wife's current location.
+
+Data Source:
+
+The weather data will be retrieved from the OpenWeather API.
+Link: OpenWeather
+
+Workflow:
+
+![image](https://github.com/Jay-05022000/OpenWeather-Airflow-Project/assets/110780565/79e269c6-0e52-43af-8b1c-78fc789ccbce)
+
+Tools Used:
+
+Visual Studio Code: To develop Python scripts.
+Apache Airflow: To orchestrate the complete ETL pipeline, in conjunction with WSL2 with Ubuntu OS locally.
+AWS Glue: To crawl CSV data available in the S3 bucket and create Athena tables for data analysis.
+Power BI Service: To create an interactive visualization report that can be refreshed automatically and shared with users.
+
+Project Learnings:
+
+1)  Setting environment variables in the local system to store credentials for system-wide or different IDE usage.
+    Example: Stored AWS credentials in the Windows system to use them in Jupyter Notebook to connect to S3.
+2)  Hosting or setting up an Apache Airflow project locally using WSL2 with Ubuntu system.
+   
+Challenges:
+
+1) Error in Airflow while executing a task involving the Email Operator.
+
+   Explanation: Using Airflow installed locally on WSL with Ubuntu OS, connected to home Wi-Fi. Running a DAG causes a network error during the Email Operator task.
+   Reason: Potential security settings in the Wi-Fi blocking outgoing traffic to the SMTP server.
+   Solution: Used personal networks like mobile hotspots to bypass security restrictions while running the DAG. To permanently resolve the issue, configure the Wi-Fi     router to allow outgoing SMTP traffic.
+   
+3) Inconsistent and unformatted data for Daily_Weather_Forecast in the Athena table created by the Glue Crawler.
+
+   Explanation: The Daily_Weather_Forecast.json file has a column named "Summary" with some values containing commas, causing column value misinterpretation by the       crawler during Athena table creation.
+   Solution: Modified the transformation.py script to remove unwanted commas from the Summary column of the daily forecast data.
+
+ETL Automation:
+
+The entire ETL process, from data extraction to sending an email notification about the DAG run status with a Power BI dashboard attachment, can be automated in different stages:
+
+1) Data Extraction, Transformation, and Storage to S3: Automated using Airflow.
+2) Updating Athena Tables to Have the Latest Data: Automated by scheduling crawlers to crawl source-cleaned files and update/create Athena tables at the desired time     and frequency.
+3)  Updating Data in Power BI: Automated by configuring scheduled refreshes in the Power BI service to ensure the dashboard shows the most current data.
+
+A Microsoft 365 Business Basic account is used to create a professional email and log into the Power BI service. The dashboard is published online using Power BI Report Server, allowing others to access it via a shared link without needing Power BI on their local systems. The dashboard is also accessible on mobile devices.
