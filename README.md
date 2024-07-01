@@ -34,7 +34,14 @@ Project Learnings:
 1)  Setting environment variables in the local system to store credentials for system-wide or different IDE usage.
     Example: Stored AWS credentials in the Windows system to use them in Jupyter Notebook to connect to S3.
 2)  Hosting or setting up an Apache Airflow project locally using WSL2 with Ubuntu system.
-   
+
+
+Output:
+
+A successful run of this project will result in an email being sent to all users. This email will include information about the DAG run and a link that allows users to access the real-time weather dashboard for their chosen location.
+
+![image](https://github.com/Jay-05022000/OpenWeather-Airflow-Project/assets/110780565/587dce85-ce9a-450d-ab79-2190efa0bf53)
+
 Challenges:
 
 1) Error in Airflow while executing a task involving the Email Operator.
