@@ -33,7 +33,7 @@ Tools Used:
 
 Folder Structure:
 
-![image](https://github.com/Jay-05022000/OpenWeather-Airflow-Project/assets/110780565/c31adb6e-549d-4693-98ba-073eac880ada)
+![image](https://github.com/Jay-05022000/OpenWeather-Airflow-Project/assets/110780565/bdc71b08-ffbe-426d-b9d2-59b91518e982)
 
 
 Project Learnings:
