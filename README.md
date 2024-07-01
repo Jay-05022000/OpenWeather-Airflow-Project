@@ -24,10 +24,10 @@ Workflow:
 
 Tools Used:
 
-Visual Studio Code: To develop Python scripts.
-Apache Airflow: To orchestrate the complete ETL pipeline, in conjunction with WSL2 with Ubuntu OS locally.
-AWS Glue: To crawl CSV data available in the S3 bucket and create Athena tables for data analysis.
-Power BI Service: To create an interactive visualization report that can be refreshed automatically and shared with users.
+1) Visual Studio Code: To develop Python scripts.
+2) Apache Airflow: To orchestrate the complete ETL pipeline, in conjunction with WSL2 with Ubuntu OS locally.
+3) AWS Glue: To crawl CSV data available in the S3 bucket and create Athena tables for data analysis.
+4) Power BI Service: To create an interactive visualization report that can be refreshed automatically and shared with users.
 
 Project Learnings:
 
