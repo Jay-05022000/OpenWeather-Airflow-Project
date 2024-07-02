@@ -74,4 +74,13 @@ The entire ETL process, from data extraction to sending an email notification ab
 2) Updating Athena Tables to Have the Latest Data: Automated by scheduling crawlers to crawl source-cleaned files and update/create Athena tables at the desired time     and frequency.
 3)  Updating Data in Power BI: Automated by configuring scheduled refreshes in the Power BI service to ensure the dashboard shows the most current data.
 
-A Microsoft 365 Business Basic account is used to create a professional email and log into the Power BI service. The dashboard is published online using Power BI Report Server, allowing others to access it via a shared link without needing Power BI on their local systems. The dashboard is also accessible on mobile devices.
+I have deployed Airflow on a local machine using WSL with Ubuntu operating system. Although DAG is scheduled to run daily but in order to run it successfully my system should be on that time (Airflow won’t be able to run the DAG at scheduled time if my system is turned off).
+
+The Glue crawlers can be scheduled with the frequency of hourly, daily and also weekly. So, we can schedule them as per our needs. There are no restrictions in this regard.
+
+The power BI schedule refresh function also can be set with daily and weekly frequency with multiple times a day to get updated data in the Power BI from the Athena tables. Here also, there is no restriction. To automatically refresh the visuals to show the latest data, I have used the Auto Refresh Plus extension which refreshes the web page at given time frequency. The Dashboard shared to users via link will be automatically updated once the dashboard is updated in Power BI. 
+
+Conclusion:
+
+Currently I must manually trigger a DAG due to above mentioned reason.In order to achieve full autonomy, the airflow should be hosted on a cloud platform which provides flexibility to run airflow instance at scheduled time.
+
